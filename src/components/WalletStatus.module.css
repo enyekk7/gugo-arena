@@ -1,0 +1,41 @@
+.walletStatus {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  max-width: 300px;
+  font-size: 0.9rem;
+}
+
+.walletInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statusText {
+  margin: 0;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+.logoutButton {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background: #b91c1c;
+} 

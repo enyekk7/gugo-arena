@@ -1,0 +1,460 @@
+.profileContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  padding: 20px;
+  color: white;
+}
+
+.profileContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-bottom: 120px;
+}
+
+.profileHeader {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.profileAvatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+
+.avatarIcon {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.profileHeader h1 {
+  color: #15803d;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #15803d, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profileHeader p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.profileInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.infoCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.infoCard h3 {
+  color: #15803d;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  color: #6c757d;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.infoValue {
+  color: #15803d;
+  font-weight: 600;
+  text-align: right;
+  word-break: break-all;
+}
+
+.connectionStatus {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.connected {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.connecting {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.disconnected {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.logoutSection {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.logoutButton {
+  background: linear-gradient(45deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+}
+
+.logoutButton:hover {
+  background: linear-gradient(45deg, #dc2626, #b91c1c);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+}
+
+/* Game Currency Display */
+.currencyDisplay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 15px;
+  padding: 12px 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  border: 1px solid #e9ecef;
+}
+
+.coinIcon {
+  font-size: 1.5rem;
+}
+
+.coinAmount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #15803d;
+  min-width: 60px;
+}
+
+.depositButton {
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(34, 197, 94, 0.3);
+}
+
+.depositButton:hover {
+  background: linear-gradient(45deg, #16a34a, #15803d);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+}
+
+.depositButton:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modalContent h3 {
+  color: #15803d;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.modalContent p {
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Deposit Options */
+.depositOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.depositOption {
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.depositOption:hover {
+  border-color: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.2);
+}
+
+.depositOption.selected {
+  border-color: #22c55e;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+
+.optionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.optionLabel {
+  font-weight: 600;
+  color: #15803d;
+  font-size: 1.1rem;
+}
+
+.optionBadge {
+  font-size: 1.5rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.optionDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.ethAmount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #15803d;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin: 0 1rem;
+}
+
+.coinAmount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #16a34a;
+}
+
+.optionRate {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.depositMessage {
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cancelButton {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancelButton:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.confirmButton {
+  background: linear-gradient(45deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+
+.confirmButton:hover {
+  background: linear-gradient(45deg, #16a34a, #15803d);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+}
+
+.confirmButton:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .profileContent {
+    padding: 1rem;
+    padding-bottom: 140px;
+  }
+  
+  .profileHeader {
+    padding: 1.5rem;
+  }
+  
+  .profileHeader h1 {
+    font-size: 2rem;
+  }
+  
+  .profileInfo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .infoCard {
+    padding: 1.5rem;
+  }
+
+  .currencyDisplay {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  
+  .coinAmount {
+    font-size: 1rem;
+    min-width: 50px;
+  }
+
+  .modalContent {
+    padding: 1.5rem;
+    width: 95%;
+  }
+
+  .depositOptions {
+    gap: 0.8rem;
+  }
+
+  .depositOption {
+    padding: 1.2rem;
+  }
+
+  .optionDetails {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .arrow {
+    margin: 0;
+    transform: rotate(90deg);
+  }
+} 
